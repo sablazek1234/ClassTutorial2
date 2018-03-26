@@ -3,8 +3,12 @@ using System.Collections.Generic;
 
 namespace Version_2_C
 {
-    class clsDateComparer : IComparer<clsWork>
+    
+    sealed class clsDateComparer : IComparer<clsWork>
     {
+        public static readonly clsDateComparer Instance = new clsDateComparer();
+        
+        private clsDateComparer(){}
         public int Compare(clsWork x, clsWork y)
         {
             // long version:

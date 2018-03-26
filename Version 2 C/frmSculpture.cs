@@ -2,6 +2,8 @@ namespace Version_2_C
 {
     public partial class frmSculpture : Version_2_C.frmWork
     {
+        public static readonly frmSculpture Instance = new frmSculpture();
+
         public frmSculpture()
         {
             InitializeComponent();
