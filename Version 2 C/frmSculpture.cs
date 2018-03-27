@@ -1,6 +1,6 @@
 namespace Version_2_C
 {
-    public partial class frmSculpture : Version_2_C.frmWork
+    sealed public partial class frmSculpture : Version_2_C.frmWork
     {
         public static readonly frmSculpture Instance = new frmSculpture();
 
@@ -23,6 +23,11 @@ namespace Version_2_C
             clsSculpture lcWork = (clsSculpture)_Work;
             lcWork.Weight = float.Parse(txtWeight.Text);
             lcWork.Material = txtMaterial.Text;
+        }
+
+        public static void Run(clsSculpture prSculpture) 
+        { 
+            Instance.SetDetails(prSculpture); 
         }
     }
 }

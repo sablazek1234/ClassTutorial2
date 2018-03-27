@@ -27,6 +27,10 @@ namespace Version_2_C
             lcWork.Type = txtType.Text;
         }
 
+        public static void Run(clsPainting prPainting) 
+        { 
+            Instance.SetDetails(prPainting); 
+        }
     }
 }
 
